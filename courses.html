@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Courses</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f8ff; /* Light blue shade */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #f0f8ff; /* Light blue shade */
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: maroon;
+            background-color: #f0f8ff;
+            padding: 10px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: #005f5f; /* Darker shade on hover */
+        }
+
+        /* Main Content */
+        .container {
+            margin-top: 80px; /* Adjust space for navbar */
+        }
+
+        .course-category {
+            margin-bottom: 50px;
+        }
+
+        .course-card {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Button Styling */
+        .btn-primary {
+            background-color: #005f5f; /* Teal button */
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #003f3f; /* Darker teal on hover */
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: powderblue; /* Light blue footer */
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">LearnHub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h2 class="text-center" style="color: maroon;">Our Courses</h2>
+
+        <!-- Programming Languages Section -->
+        <div class="course-category">
+            <h3 class="text-primary">Programming Languages</h3>
+            <div class="row">
+                <!-- Course 1 -->
+                <div class="col-md-4">
+                    <div class="card course-card shadow-lg">
+                        <img src="python.jpg" class="card-img-top" alt="Course Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Introduction to Python</h5>
+                            <p class="card-text">Learn the fundamentals of Python, one of the most versatile programming languages.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#courseDetailsModal" onclick="showCourseDetails('Python')">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="col-md-4">
+                    <div class="card course-card shadow-lg">
+                        <img src="js1.jpg" class="card-img-top" alt="Course Image">
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript for Beginners</h5>
+                            <p class="card-text">Master JavaScript, a powerful language for web development.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#courseDetailsModal" onclick="showCourseDetails('JavaScript')">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 3 -->
+                <div class="col-md-4">
+                    <div class="card course-card shadow-lg">
+                        <img src="java.jpg" class="card-img-top" alt="Course Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Advanced Java</h5>
+                            <p class="card-text">Deep dive into Java with real-world projects and applications.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#courseDetailsModal" onclick="showCourseDetails('Java')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Business Management Section -->
+        <div class="course-category">
+            <h3 class="text-primary">Business Management</h3>
+            <div class="row">
+                <!-- Course 1 -->
+                <div class="col-md-4">
+                    <div class="card course-card shadow-lg">
+                        <img src="leader.jpg" class="card-img-top" alt="Course Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Leadership Skills</h5>
+                            <p class="card-text">Develop essential leadership skills to lead teams and organizations effectively.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#courseDetailsModal" onclick="showCourseDetails('Leadership')">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="col-md-4">
+                    <div class="card course-card shadow-lg">
+                        <img src="pm.jpg" class="card-img-top" alt="Course Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Management</h5>
+                            <p class="card-text">Learn to manage and deliver successful projects using industry best practices.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#courseDetailsModal" onclick="showCourseDetails('Project Management')">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 3 -->
+                <div class="col-md-4">
+                    <div class="card course-card shadow-lg">
+                        <img src="market.jpg" class="card-img-top" alt="Course Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Marketing Essentials</h5>
+                            <p class="card-text">Learn key marketing strategies to grow your business and reach customers.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#courseDetailsModal" onclick="showCourseDetails('Marketing')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more fields like "Data Science", "Design" -->
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 LearnHub. All rights reserved. Author: Chandushree R.</p>
+    </footer>
+
+    <!-- Modal for Course Details -->
+    <div class="modal fade" id="courseDetailsModal" tabindex="-1" role="dialog" aria-labelledby="courseDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="courseDetailsModalLabel">Course Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="courseDetails"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showCourseDetails(courseName) {
+            let details = '';
+            switch(courseName) {
+                case 'Python':
+                    details = 'Learn Python from scratch, including variables, control flow, functions, and more.';
+                    break;
+                case 'JavaScript':
+                    details = 'JavaScript is a key language for web development. Learn how to interact with websites dynamically.';
+                    break;
+                case 'Java':
+                    details = 'Master the fundamentals and advanced features of Java for building robust applications.';
+                    break;
+                case 'Leadership':
+                    details = 'This course focuses on essential leadership principles and strategies for managing teams.';
+                    break;
+                case 'Project Management':
+                    details = 'Gain knowledge about planning, executing, and monitoring projects successfully.';
+                    break;
+                case 'Marketing':
+                    details = 'Learn marketing strategies, from digital to traditional methods, for business success.';
+                    break;
+            }
+            document.getElementById('courseDetails').textContent = details;
+        }
+    </script>
+</body>
+</html>

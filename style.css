@@ -1,0 +1,85 @@
+/* Custom CSS */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh; /* Use full viewport height */
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Disable scrolling */
+}
+
+/* Navbar and footer fixed at top and bottom */
+.navbar, footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #f0f8ff;
+}
+
+.navbar {
+    top: 0;
+    background-color: #f0f8ff;
+    height: 70px; /* Set height of navbar */
+}
+
+footer {
+    bottom: 0;
+    background-color:#f0f8ff;
+    text-align: center;
+    padding: 10px 0;
+    height: 60px; /* Set height of footer */
+}
+
+/* Main Content */
+.container {
+    margin-top: 70px; /* Space for fixed navbar */
+    margin-bottom: 70px; /* Space for fixed footer */
+    height: calc(100vh - 130px); /* Adjust content height between navbar and footer */
+}
+
+/* Photo and Info Section */
+.container .row {
+    margin-top: 20px;
+    height: 100%;
+}
+
+/* Navbar item styles */
+.navbar-nav .nav-item .nav-link {
+    color: maroon;
+    background-color: #079494;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar color */
+.navbar-light {
+    background-color: #f0f8ff;
+}
+
+/* Footer styles */
+footer p {
+    margin: 0;
+    padding: 0;
+}
+.container .row img {
+    margin-top: 60px; /* Adjust the value as needed to move the image down */
+}
+
+
+
+/* Hover effect on navbar links */
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #f0f8ff;
+}
+body{
+    background-color: #f0f8ff ;
+}
+
+.col-md-6{
+    font-size: 2em;
+}
